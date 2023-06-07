@@ -19,9 +19,9 @@ def two_sum(nums, target):
     for i, num in enumerate(nums):
         complement = target - num
         if complement in num_indices:
-            return [num_indices[num], i]
+            return [num_indices[complement], i]
 
-    num_indices[num] = i
+        num_indices[num] = i
     return []
 
 # time and space complexity: O(n)
