@@ -24,3 +24,6 @@ def two_sum(nums, target):
 
     num_indices[num] = i
     return []
+
+# time and space complexity: O(n)
+# this is because it take O(n) time to iterate through the list of numbers and O(n) space to store the hash table
