@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Time : 2023/05/07 08:11
 # @Author : AllisonOge from Google Kickstart competition 2021

@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # @Time : 2023/05/07 08: 22
 # @Author : AllisonOge from HackerRank

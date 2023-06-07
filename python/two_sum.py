@@ -1,4 +1,3 @@
-#!/usr/bin/pythhon3
 # -*- coding: utf-8 -*-
 # @Time : 2023/05/07 07:54
 # @Author : AllisonOge
