@@ -14,17 +14,33 @@
 # the number of citations that each paper has will never change.
 # Please help Jorge determine his H-index score after each paper he wrote.
 #
-# create a function to calculate the H-index score after each paper Jorge wrote
+# Limits
+# Time limit: 50 secqonds per test set.
+# Memory limit: 1GB.
+# 1 ≤ T ≤ 100.
+# 1 ≤ Ci ≤ 10000, for all i.
+#
+# Test set 1
+# 1 ≤ N ≤ 1000.
+#
+# Test set 2
+# 1 ≤ N ≤ 10000.
 
-def h_index(citations):
+def h_index(c):
+    """determine the h-index score
+    Args:
+        c (list): citations for every paper written
+    Return:
+        h_index (list): h-index score after each paper written
     """
-    :param citations: a list of citations
-    :return: a list of H-index scores after each paper Jorge wrote
+    h_index = []
 
-    :example:
-    >>> h_index([5, 1, 2])
-    [1, 1, 2]
-    """
-    h_index_scores = []
+    return h_index
 
-    return h_index_scores
+test_cases = int(input())
+for t in range(1, test_cases + 1):
+    # read the number of paper Jorge wrote
+    _ = int(input())
+    # read citations for the given papers
+    c = list(map(int, input().split()))
+    print(f"Case #{t}: {' '.join(h_index(c))}")

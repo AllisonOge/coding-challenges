@@ -54,3 +54,6 @@ class TestSampleProblem(unittest.TestCase):
 
             # assert the output matches the expected output
             self.assertEqual(expected_output.strip(), actual_output.strip())
+
+if __name__ == "__main__":
+    unittest.main()
