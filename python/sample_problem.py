@@ -7,7 +7,7 @@
 # Time limit: 40 seconds per test set.
 # Memory limit: 1GB.
 #
-# Test set 1 (Visible Verdict)
+# Test set 1
 # 1 ≤ T ≤ 100.
 # 1 ≤ N ≤ 100000.
 # 1 ≤ M ≤ 10000.
