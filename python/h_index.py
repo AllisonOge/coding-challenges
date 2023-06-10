@@ -25,17 +25,34 @@
 #
 # Test set 2
 # 1 ≤ N ≤ 10000.
+#
+# Link to full problem statement: https://codingcompetitions.withgoogle.com/kickstart/round/00000000008f4332/0000000000941e56#problem
 
 def h_index(c):
     """determine the h-index score
     Args:
         c (list): citations for every paper written
     Return:
-        h_index (list): h-index score after each paper written
+        h_index (list): h-index score after each new paper
     """
-    h_index = []
+    h_index = 1 # h-index for the first paper is always 1
+    h_indexes = [h_index]
+    for i in range(len(c)):
+        if i > 0:
+            np = i + 1
+            count = 0
+            while np > 0:
+                count = 0 # reset count
+                # loop through previous papers and find the h-index
+                for ci in c[:i+1]:
+                    count += 1 if ci >= np else 0
+                if np == count:
+                    h_index = np
+                    break
+                np -= 1 # decrease number of paper
+            h_indexes.append(h_index)
 
-    return h_index
+    return h_indexes
 
 test_cases = int(input())
 for t in range(1, test_cases + 1):
@@ -43,4 +60,4 @@ for t in range(1, test_cases + 1):
     _ = int(input())
     # read citations for the given papers
     c = list(map(int, input().split()))
-    print(f"Case #{t}: {' '.join(h_index(c))}")
+    print(f"Case #{t}: {' '.join(list(map(str, h_index(c))))}")
