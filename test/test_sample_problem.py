@@ -25,7 +25,7 @@ class TestSampleProblem(unittest.TestCase):
             process = subprocess.Popen(["python", sample_problem_program], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
 
             # send the input data to the program
-            actual_output, error = process.communicate(input=input_data)
+            actual_output, _ = process.communicate(input=input_data)
 
             # assert the output matches the expected output
             self.assertEqual(expected_output, actual_output)

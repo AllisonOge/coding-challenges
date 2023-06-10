@@ -12,6 +12,8 @@
 # 1 ≤ N ≤ 100000.
 # 1 ≤ M ≤ 10000.
 # 1 ≤ Ci ≤ 1000, for all i.
+#
+# link to full problem : https://codingcompetitions.withgoogle.com/kickstart/round/00000000008f4332/0000000000942404#problem
 
 test_cases = int(input())
 for t in range(1, test_cases+1):
