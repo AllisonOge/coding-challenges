@@ -3,6 +3,11 @@
 # @Author : AllisonOge from GeeksForGeeks
 # @Descirbe: Given a singly linked list of size N of integers. The task is to check if the given linked list is palindrome or not.
 
+# Limits
+# Time limit: 80 seconds per test case.
+# Memory limit: 64 megabytes.
+# 1 ≤ N ≤ 10^5
+#
 # Link to problem statement: https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab
 
 def is_palindrome(head):

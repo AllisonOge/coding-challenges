@@ -4,6 +4,7 @@
 # @Author : AllisonOge
 
 import unittest
+import time
 from python.is_palindrome import is_palindrome
 
 class Node:
@@ -90,5 +91,12 @@ class TestIsPalindrome(unittest.TestCase):
         is_palindrome_count_allocations(head)
         self.assertEqual(is_palindrome_count_allocations.count, 1)
     
+    def test_time_complexity(self):
+        head = create_linked_list(list(range(1, 1001)) + list(range(1000, 0, -1)))
+        start_time = time.time()
+        is_palindrome(head)
+        end_time = time.time()
+        self.assertLessEqual(end_time - start_time, 80)
+
 if __name__ == '__main__':
     unittest.main()
