@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+# @Time : 2023/05/13 19:46
+# @Author : AllisonOge from GeeksForGeeks
+# @Descirbe: Given a singly linked list of size N of integers. The task is to check if the given linked list is palindrome or not.
+
+# Link to problem statement: https://practice.geeksforgeeks.org/problems/check-if-linked-list-is-pallindrome/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab
+
+def is_palindrome(head):
+    """check if the given linked list is palindrome or not
+    Args:
+        head (Node): head of the linked list
+    Return:
+        is_palindrome (bool): True if the linked list is palindrome, False otherwise
+    """
+
+    return False
