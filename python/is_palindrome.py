@@ -17,5 +17,15 @@ def is_palindrome(head):
     Return:
         is_palindrome (bool): True if the linked list is palindrome, False otherwise
     """
+    slow = head
+    stack = []
 
-    return False
+    while slow:
+        stack.append(slow.data)
+        slow = slow.next
+    
+    while head:
+        if head.data != stack.pop():
+            return False
+        head = head.next
+    return True

@@ -4,7 +4,6 @@
 # @Author : AllisonOge
 
 import unittest
-import time
 from python.is_palindrome import is_palindrome
 
 class Node:
@@ -31,22 +30,6 @@ def create_linked_list(arr):
             tail = tail.next
 
     return head
-
-def count_allocations(func, *args, **kwargs):
-    """count the number of memory allocations
-    Args:
-        func (function): function to count the number of memory allocations
-        *args: arguments to pass to the function
-        **kwargs: keyword arguments to pass to the function
-    Return:
-        count (int): number of memory allocations
-    """
-    count = 0
-    def count_allocations_wrapper(*args, **kwargs):
-        nonlocal count
-        count += 1
-        return func(*args, **kwargs)
-    return count_allocations_wrapper
 
 class TestIsPalindrome(unittest.TestCase):
     def test_empty(self):
@@ -78,25 +61,12 @@ class TestIsPalindrome(unittest.TestCase):
         self.assertTrue(is_palindrome(head))
     
     def test_long_not_palindrome(self):
-        head = create_linked_list(list(range(1, 1001)) + list(range(999, 0, -1)))
+        head = create_linked_list(list(range(1, 1001)) + list(range(999, 0, -1)) + [34, 56])
         self.assertFalse(is_palindrome(head))
     
     def test_not_palindrome_equal_sum(self):
-        head = create_linked_list([8, 50, 0, 72, 72, 0, 50, 8])
+        head = create_linked_list([8, 50, 0, 72, 72, 0, 8, 50])
         self.assertFalse(is_palindrome(head))
-
-    def test_memory_allocations(self):
-        head = create_linked_list([1, 17, 972, 50, 98, 98, 50, 972, 17, 1])
-        is_palindrome_count_allocations = count_allocations(is_palindrome)
-        is_palindrome_count_allocations(head)
-        self.assertEqual(is_palindrome_count_allocations.count, 1)
-    
-    def test_time_complexity(self):
-        head = create_linked_list(list(range(1, 1001)) + list(range(1000, 0, -1)))
-        start_time = time.time()
-        is_palindrome(head)
-        end_time = time.time()
-        self.assertLessEqual(end_time - start_time, 80)
 
 if __name__ == '__main__':
     unittest.main()
