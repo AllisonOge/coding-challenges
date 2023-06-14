@@ -3,6 +3,8 @@
 # @Author : AllisonOge
 # @Describe: create a function to find a pair of numbers from a set of numbers that add up to a target number
 
+# Link to the problem statement: https://leetcode.com/problems/two-sum/
+
 def two_sum(nums, target):
     """
     :param nums: a list of numbers
