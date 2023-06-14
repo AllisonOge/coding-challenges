@@ -47,7 +47,7 @@ def compare_lists(head1, head2):
         temp1 = temp1.next
         temp2 = temp2.next
     
-    if temp1 is None and temp1 is None:
+    if temp1 is None and temp2 is None:
         return True
     
     return False
