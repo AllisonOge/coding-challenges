@@ -15,7 +15,7 @@ def reverse(head):
     Args:
         head (Node): head of a linked list
     Return:
-        None
+        head (Node): pointer to reversed list
     """
     prev = None
     current = head
